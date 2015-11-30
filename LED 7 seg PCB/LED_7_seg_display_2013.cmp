@@ -1,0 +1,171 @@
+Cmp-Mod V01 Created by CvPcb (2013-07-07 BZR 4022)-stable date = 17/03/2015 13:22:55
+
+BeginCmp
+TimeStamp = /50643FB9;
+Reference = 7SEG1;
+ValeurCmp = SA18-11_CA;
+IdModule  = 7SEG_CA_SA18-11;
+EndCmp
+
+BeginCmp
+TimeStamp = /513DD543;
+Reference = 7SEG2;
+ValeurCmp = SA23-12_CA;
+IdModule  = 7SEG_CC_2_3INCH;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FA83443;
+Reference = C1;
+ValeurCmp = 100u;
+IdModule  = C2V8_large_pads;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FA83448;
+Reference = C2;
+ValeurCmp = 100n;
+IdModule  = C1_wide_lg_pad_2;
+EndCmp
+
+BeginCmp
+TimeStamp = /55082B20;
+Reference = C3;
+ValeurCmp = C;
+IdModule  = C1_wide_lg_pad;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FA83424;
+Reference = IC1;
+ValeurCmp = ULN2003AD;
+IdModule  = DIP-16__300_ELL;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF1781;
+Reference = P1;
+ValeurCmp = INPUT;
+IdModule  = SIL-7_large_pads;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF1787;
+Reference = P2;
+ValeurCmp = OUTPUT;
+IdModule  = SIL-7_large_pads;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF3AB0;
+Reference = P3;
+ValeurCmp = CONN_1;
+IdModule  = 1pin_3mmhole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF3AB3;
+Reference = P4;
+ValeurCmp = CONN_1;
+IdModule  = 1pin_3mmhole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF3AB6;
+Reference = P5;
+ValeurCmp = CONN_1;
+IdModule  = 1pin_3mmhole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF3ABA;
+Reference = P6;
+ValeurCmp = CONN_1;
+IdModule  = 1pin_3mmhole;
+EndCmp
+
+BeginCmp
+TimeStamp = /55082A54;
+Reference = P7;
+ValeurCmp = CONN_1;
+IdModule  = OSHW_logo_small_back;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF1886;
+Reference = Q1;
+ValeurCmp = NPN;
+IdModule  = TO92-EBC_large_pad;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF1895;
+Reference = R1;
+ValeurCmp = 1k;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FDF1891;
+Reference = R2;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF258;
+Reference = R6;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF25D;
+Reference = R7;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF263;
+Reference = R8;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF267;
+Reference = R9;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF26A;
+Reference = R10;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF26E;
+Reference = R11;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF271;
+Reference = R12;
+ValeurCmp = R;
+IdModule  = R3-LARGE_PADS_0_8_hole;
+EndCmp
+
+BeginCmp
+TimeStamp = /4FEAF2E9;
+Reference = U1;
+ValeurCmp = 74HC595_POWER;
+IdModule  = DIP-16__300_ELL;
+EndCmp
+
+EndListe
