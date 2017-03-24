@@ -1,28 +1,33 @@
-Solder Solar
+Seg-O-Matic
 ============
 
-Design and instructions for a simple DIY solar powered torch.
+Ever needed to have a large visual numerical display? 
 
-This kit is designed as a **"Learn to Solder"** kit and as an introduction to **solar power**.
+This kit is a series connected large 7 segment LED driver. 
+
+-Note: this kit will require an Arduino or other micro-controller to run.-
 
 *By: Matthew Little*
 
-*Date: 17th Feb 2017*
+*Date: 24th March 2017*
 
 *email: hello@curiouselectric.co.uk*
 
 Overview
 -------
-This is a very simple soldering kit to build a solar powered torch. Use it for camping, exploring, investigating and illuminating.
+This kit is a series connected large 7 segment LED driver. 
 
-The unit has a small solar panel which recharges an ultra-capacitor.
-There are two LEDs, one white and one red, which are powered by the energy in the ultra-capacitor.
+It can drive a 1.75” (45mm) LED unit (included).
 
-This can be used when out and about, charged during the day and a handy light for night. The white light is useful to find your way around, while the red light will not affect your night vision, so can be used when reading map at night.
+It requires 12V to function.
 
-The ultra-capacitor is 0.47F which stores enough charge for around 20 minutes of white light, or around 1 hour of red light.
+It is designed to connect to an Arduino or other micro-controller. Example code for the Arduino is available.
 
-This kit can also be used as a small power supply for other projects (requiring a 3-5.5V power supply). This could be used for very low power monitoring nodes.
+A 74HC595 shift register is used along with a UN2003 transistor array.
+
+The decimal point can also be utilised.
+
+-Note: this kit will require an Arduino or other micro-controller to run.-
 
 Kit Contents
 ------------
@@ -32,29 +37,27 @@ Kit Contents
    
 This kit contains the following parts:
 
-+------+-----------------+--------------------------+
-| REF  | Description     | Details                  |
-+======+=================+==========================+
-| C1   | Ultra-Capacitor | 0.47F Electrolytic       |
-+------+-----------------+--------------------------+
-| D1   | Diode           |                          |
-+------+-----------------+--------------------------+
-| D2   | LED Red         |                          |
-+------+-----------------+--------------------------+
-| D3   | LED White       |                          |
-+------+-----------------+--------------------------+
-| R1   | Resistor        |                          |
-+------+-----------------+--------------------------+
-| R2   | Resistor        |                          |
-+------+-----------------+--------------------------+
-| SC1  | Solar PV Panel  |                          |
-+------+-----------------+--------------------------+
-| SW1  | Switch          |                          |
-+------+-----------------+--------------------------+
-| SW2  |  Switch         |                          |
-+------+-----------------+--------------------------+
-| PCB  |  Circuit board  |                          |
-+------+-----------------+--------------------------+
++------+----------------------+-------------------------------------------------+
+| REF  | Description          | Details                                         |
++======+======================+=================================================+
+| 7SEG1   | Ultra-Capacitor   | 0.47F Electrolytic                              |
++------+----------------------+-------------------------------------------------+
+| C1  | Capacitor             |  100uf Electrolytic De-coupling                 |
++------+----------------------+-------------------------------------------------+
+| C2   | Capacitor            |  100nf Polyester De-coupling                    |
++------+----------------------+-------------------------------------------------+
+| C3  | Capacitor             |  100nf Polyester. Line termination (if required)|
++------+----------------------+-------------------------------------------------+
+| IC1   | Transistor array    |  ULN2003AD IC                                   |
++------+----------------------+-------------------------------------------------+
+| R1,R2  | Resistors          |  1k Current limit for Decimal point             |
++------+----------------------+-------------------------------------------------+ 
+| R6-12  | Resistors          | 330 For LED current limit segments              |
++------+----------------------+-------------------------------------------------+
+| U1 |  Shift Register        |   74HC595                                       |
++------+----------------------+-------------------------------------------------+
+| PCB  |  Circuit board       |                                                 |
++------+----------------------+-------------------------------------------------+
 
 This photo shows where each of the components is placed on the PCB.
 
@@ -88,15 +91,15 @@ https://cdn.shopify.com/s/files/1/0943/8168/files/FullSolderComic_EN.pdf
 
 Step 1: Solder Resistors
 ------------------------
-There are two resistor to solder into the areas marked R1 and R2. These control the current into the LEDs and hence their brightness.
+There are 9 resistors to solder into the areas marked R1, R2 and R6-R12. These control the current into the LEDs and hence their brightness.
 
-+------+-----------------+--------------------------+
-| REF  | Description     | Details                  |
-+======+=================+==========================+
-| R1   | 330R resistor   | Orange-Orange-Brown-Gold |
-+------+-----------------+--------------------------+
-| R2   | 120R resistor   | Brown-Red-Black-Gold     |
-+------+-----------------+--------------------------+
++---------+---------------+--------------------------+
+| REF     | Description   | Details                  |
++=========+===============+==========================+
+| R1,R2   | 1k resistor   | Brown-Black-Red-Gold     |
++---------+---------------+--------------------------+
+| R6-R12  | 330R resistor |  Orange-Orange-Brown-Gold|
++---------+---------------+--------------------------+
 
 .. image:: Instruction_Photos/PCB1_sm.jpg?raw=true
    :width: 400px
