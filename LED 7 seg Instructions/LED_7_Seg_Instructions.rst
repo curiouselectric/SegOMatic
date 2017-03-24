@@ -93,6 +93,13 @@ Step 1: Solder Resistors
 ------------------------
 There are 9 resistors to solder into the areas marked R1, R2 and R6-R12. These control the current into the LEDs and hence their brightness.
 
+Read the colour bands on the resistors or use a multimeter to identify the resistors.
+
+Solder into the relevant places.
+
+Their orientation does not matter.
+
+
 +---------+---------------+--------------------------+
 | REF     | Description   | Details                  |
 +=========+===============+==========================+
@@ -104,36 +111,37 @@ There are 9 resistors to solder into the areas marked R1, R2 and R6-R12. These c
 .. image:: Instruction_Photos/PCB1_sm.jpg?raw=true
    :width: 400px
 
-Step 2: Solder Diode
+Step 2: Solder Capacitors
 ------------------------
 
-There is one diode to solder into the holes marked D1. This is a 1N5819 Schottky diode, which is suitable for up to 1A and has a low voltage drop.
-The diode allow current to pass from the solar cell to the capacitor, but not allow current to flow back to the solar cell.
-This diode **must** be inserted with the correct orientation. The white band on the diode must align with the thicker white band on the PCB silk-screen.
+Identify and then solder in the capacitors. 
+
+Check the orientation of C1. The white line on the side of C1 signifies negative side. 
+
+The round pad on the PCB signifies negative. The longer lead signifies positive. The square pad on the PCB is positive.
+
+To reduce the height of these components, bend over C1 as shown in the photo.
 
 .. image:: Instruction_Photos/PCB2_sm.jpg?raw=true
    :width: 400px
 
-Info: The data sheet for the diode is here: https://www.diodes.com/assets/Datasheets/ds23001.pdf
 
-Step 3: Solder Switches
+Step 3: Solder the Transistor
 ------------------------
-There are two switches to solder in locations SW1 and SW2.
+Check BC548 orientation. This fits into Q1.
 
 .. image:: Instruction_Photos/PCB3_sm.jpg?raw=true
    :width: 400px
 
-Step 4: Solder LEDs
+Step 4: Solder the 74HC595 shift register
 ------------------------
-There are two LEDs to solder - one white and one red. These look very similar, but the red LED will have a label on it. Do not mix these up when the label taken off.
+To keep the profile low, no IC holders are used in this design. You can add them if you would like to.
 
-It is best to solder the white LED first, then take the label off the red LED and solder that.
-You must ensure correct polarity of these LEDs.
+Ensure the 74HC595 is fitted into the correct socket.
 
-The positive lead will be the longer lead. The negative lead has a slightly flat side to the LED case. These should align with the markings "+" and "FLAT" on the PCB.
+Ensure the notch on the component lines up with the notch on the circuit board silk-screen.
 
-The LEDs are designed to be bent down to align with the PCB into the cut-outs.
-Please see photos for clarification.
+**DOUBLE CHECK THIS** (if soldering directly in). It will be VERY difficult to change if you get it wrong.
 
 .. image:: Instruction_Photos/PCB4_sm.jpg?raw=true
    :width: 400px
@@ -141,15 +149,15 @@ Please see photos for clarification.
 .. image:: Instruction_Photos/PCB5_sm.jpg?raw=true
    :width: 400px
 
-Step 5: Solder Capacitor
+Step 5: Solder the UN2003 transistor array
 ------------------------
-The capacitor is a 0.47F ultra-capacitor. This is used to store the energy from the solar cell so it can be used later.
-It is an electrolytic capacitor and you **must ensure the correct polarity**.
+To keep the profile low, no IC holders are used in this design. You can add them if you would like to.
 
-There are some small white tringles on the capacitor which indicate the negative pin. This pin must align with the large white area of C1 on the PCB silk screen.
+Ensure the UN2003 is fitted into the correct socket.
 
-Another way to find the pin polarity is that the positive (+) pin is on the bottom of the capacitor and the negative is on the top.
-Please see photos for clarification.
+Ensure the notch on the component lines up with the notch on the circuit board silk-screen.
+
+**DOUBLE CHECK THIS** (if soldering directly in). It will be VERY difficult to change if you get it wrong.
 
 .. image:: Instruction_Photos/PCB6_sm.jpg?raw=true
    :width: 400px
@@ -157,15 +165,20 @@ Please see photos for clarification.
 .. image:: Instruction_Photos/PCB7_sm.jpg?raw=true
    :width: 400px
 
-Step 6: Solder PV Cell
+Step 6: Solder on P1 and P2 connectors
 ------------------------
-The PV cell is actually a module comprised of a number of small solar PV cells. This unit has a maximum output of 5.5V and a maximum current of 30mA under ideal conditions.
+If you are going to link up a number of these units then you will need to add the INPUT and OUTPUT connectors. These are labelled P1 and P2.
 
-The solar cell is attached to the back of the PCB and so will cover the soldering already done - please **double check** your soldering here and ensure there are not any bad connections or solder short circuits.
+To do this there are 7-way male and female header pins. I place the male in P2 (the output) and the female in P1 (the input).
 
-We need to align the + connection on the PV cell with the + on the PCB.
+In order for the connector to lie flat, the male header pins are NOT inserted in the usual way.
+Instead we use the longer pins to go into the PCB (see photo).
+Solder them in.
+The black plastic strip can then be pushed back to expose more of the pins.
 
-We need to add quite a lot of solder to make this conenction. It is best to put a blob of solder on the PV cell pad, then leave it to cool. Then align the PV cell and add more solder until the connection is made to the contacts on the edge of the PCB.
+Cut off the excess from the pins through the circuit board.
+
+These connectors are only needed if you are putting two or more boards together.
 
 .. image:: Instruction_Photos/PCB8_sm.jpg?raw=true
    :width: 400px
@@ -176,11 +189,15 @@ We need to add quite a lot of solder to make this conenction. It is best to put 
 .. image:: Instruction_Photos/PCB10_sm.jpg?raw=true
    :width: 400px
 
-Step 7: Attach Key-ring
-------------------------
-If used, the key-ring can be bent out slightly and fitted into the hole on the side of the PCB.
+Step 7: Solder the LED display
+-----------------------------
+The LED display is soldered on the reverse (solder) side of the PCB. This makes the whole unit much thinner.
 
-This is designed to help clip it onto a back-pack etc. We would suggest not using this with keys, as the metal keys might short circuit the components and cause a problem.
+You must ensure the correct orientation of the display.
+
+The decimal point goes towards the bottom right hand corner of the PCB when looking at the solder side. The decimal point is on the end with P1 and P2, the input and output connections.
+
+**DOUBLE CHECK THIS**. It will be **VERY** difficult to change if you get it wrong.
 
 .. image:: Instruction_Photos/PCB11_sm.jpg?raw=true
    :width: 400px
@@ -188,10 +205,11 @@ This is designed to help clip it onto a back-pack etc. We would suggest not usin
 .. image:: Instruction_Photos/PCB12_sm.jpg?raw=true
    :width: 400px   
    
-Step 8: Finished!
+Step 8: Build is Finished!
 ------------------------
-Place the unit in bright sunlight for a while (at least 10mins).
-When pressed, the switches should control each LED.
+Have a nice cup of tea.
+
+Once the device is constructed, the next step is check it powers up OK and then to test with a programmed Arduino....
 
 .. image:: Instruction_Photos/PCB13_sm.jpg?raw=true
    :width: 400px
@@ -205,22 +223,52 @@ When pressed, the switches should control each LED.
 .. image:: Instruction_Photos/InUse3_sm.jpg?raw=true
    :width: 400px   
 
+Step 9: Connect to an Arduino
+-----------------------------
+There are 7 connections to the 7 segment LED boards. Pin 1 is the square pad. The connections are:
+
+Pin 1 →  Serial LATCH   → A3 Arduino
+Pin 2 →  Serial CLOCK  → A5 Arduino
+Pin 3 →  Serial DATA     → A4 Arduino
+Pin 4 →  GROUND         → GND Arduino
+Pin 5 →  +5V                  → +5Arduino
+Pin 6 →  GROUND
+Pin 7 →  +12V 
+
+In the example code for the Arduino, pin 1 (LATCH) is connected to A3, pin 2 (CLOCK) is connected to A5 and pin 3 (DATA) is connected to A4. The Ground and +5 must also be connected.
+
+Step 10: Upload the example sketch 
+----------------------------------
+Note: These instructions assume you are familiar with the Arduino IDE and uploading Sketches. If not search online for some great tutorials.
+This was tested on version 1.02.
+
+Download the example code from www.re-innovation.co.uk.
+Add this to your sketches folder.
+Open and upload to your Arduino.
+
+This should then run through the various example functions. 
+Check the notes within the code for more details.
+
+Step 11: Apply a 12V power supply
+---------------------------------
+The LED unit requires 12V DC to operate. This is due to the large size of the LED display, with four LEDs in each segment. The required voltage must be 8V or higher. The 330 ohm resistors limit the current from the 12V supply.
+
+Apply 12V to pins 6 (Ground) and 7 (+12V DC). Use an adjustable current limit power supply (if possible) when testing this. If there are any bad connections, check your soldering and orientation of all components.
+Note: If using a battery the ALWAYS ensure there is a fuse in the 12V power line.
+
+Step 12: Build your project
+---------------------------
+Check www.re-innovation.co.uk for some examples of this kit in action.
+We would love to hear and see your application and ideas. Please email any photos to info@re-innovation.co.uk, or leave comments.
+
+
 Going Further
 ----------------------
-This unit is also designed to be used as a solar power unit for very low power applications. Connections to P4 are to the terminals of the ultra-capacitor and these can be used to power other projects.
-Remember that the voltage can vary from 0V (when totally discharged) up to 5.3V (when totally charged). The attached circuit must be able to withstand this range of voltages.
+
 
 Troubleshooting
 --------------------
-This ciruit is relatively simple and designed for the beginner. There are four items which have a polarity and the circuit will not work if any of the following are places the wrong way around:
-- Diode
-- LEDs
-- Capacitor
-- PV Cell
 
-Please double check these in case of any issues.
-
-Please also double check the soldering to ensure that there are no short circuits (solder connecting two pads) or 'dry joints' (which do not have enough solder or are not clean).
 
 Circuit Schematic
 -------------------
